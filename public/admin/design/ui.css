@@ -1,0 +1,234 @@
+
+input, button, select, .dropzone {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+input {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	margin: 0;
+	padding: 3px 8px;
+	color: #666;
+	background: #ececec;
+	text-align: left;
+	border: 1px solid #d8d8d8;
+	border-bottom: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: 0px 1px 0px rgba(255,255,255,0.58), inset 0px 0px 6px rgba(0,0,0,0.07);
+	cursor: text;
+	-webkit-transition: all 250ms ease-out;
+	transition: all 250ms ease-out;
+}
+
+input[type="text"] {
+	width: 128px;
+}
+
+input:hover,
+input:focus {
+	background: #fcfcfc;
+}
+
+button {
+	display: inline-block;
+	width: auto;
+	height: 28px;
+	margin: 0;
+	padding: 0 8px;
+	line-height: normal;
+	color: #999;
+	background: #ececec;
+	text-align: center;
+	border: 1px solid #d2d2d2;
+	border-bottom: 1px solid #d8d8d8;
+	border-radius: 4px;
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 14px 13px rgba(255,255,255,0.57);
+	overflow: visible;
+	cursor: pointer;
+	outline: none;
+	-webkit-transition: all 250ms ease-out;
+	transition: all 250ms ease-out;
+}
+
+button:hover,
+button:focus {
+	background: #fcfcfc;
+}
+
+button:active {
+	border-color: #acd1e9;
+	box-shadow: 0px 0px 4px 4px #acd1e9;
+	-webkit-transition: all 50ms ease-out;
+	transition: all 50ms ease-out;
+}
+
+
+
+select {
+	display: inline-block;
+	position: relative; /* TODO: REMOVE THIS */
+	width: auto;
+	height: 28px;
+	margin: 0;
+	padding: 3px 8px;
+	color: #999;
+	background: #ececec;
+	text-align: center;
+	border: 1px solid #d2d2d2;
+	border-bottom: 1px solid #d8d8d8;
+	border-radius: 4px;
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 14px 13px rgba(255,255,255,0.57);
+	overflow: visible;
+	cursor: pointer;
+	outline: none;
+	-webkit-transition: all 250ms ease-out;
+	transition: all 250ms ease-out;
+	-webkit-user-select: none;
+	user-select: none;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+select:hover,
+select:focus {
+	background: #fcfcfc;
+}
+
+select:active {
+	color: #666;
+	border-color: #acd1e9;
+	box-shadow: 0px 0px 4px 4px #acd1e9;
+	-webkit-transition: all 50ms ease-out;
+	transition: all 50ms ease-out;
+}
+
+select option {
+	color: #666;
+	background: #f9f9f9;
+}
+
+
+
+dialog {
+	display: block;
+	position: fixed;
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	border: 0px solid transparent;
+	-webkit-transition: -webkit-transform all 250ms ease-out;
+	transition: transform 250ms ease-out;
+	z-index: 1000;
+}
+
+dialog {
+	background: rgba(0,0,0, 0.0);
+	-webkit-transform: translate(0%, -100%);
+	transform: translate(0%, -100%);
+}
+
+dialog.active {
+	background: rgba(0,0,0, 0.5);
+	-webkit-transform: translate(0%, 0%);
+	transform: translate(0%, 0%);
+}
+
+dialog > div {
+	display: none;
+	position: absolute;
+	min-width: 512px;
+	max-width: 80%;
+	max-height: 80%;
+	margin: 0;
+	padding: 0;
+	left: 50%;
+	top: 50%;
+	background: #fff;
+	border: 2px solid #333;
+	border-radius: 8px;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	overflow: auto;
+}
+
+dialog > div.active {
+	display: block;
+}
+
+dialog > div > h3 {
+	display: block;
+	margin: 0px 0px 16px 0px;
+	padding: 8px;
+	color: #333;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: normal;
+	border-bottom: 1px solid #ddd;
+}
+
+dialog > div > h3 > button {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+
+dialog > div > a.close:hover {
+	color: #333;
+}
+
+dialog > div > footer {
+	display: block;
+	top: auto;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	margin: 2em 0px 0px 0px;
+	padding: 8px;
+	border-top: 1px solid #d8d8d8;
+	border-radius: 0px 0px 8px 8px;
+	text-align: right;
+	background: #fff;
+}
+
+dialog > div > p,
+dialog > div > div {
+	margin: 8px;
+}
+
+dialog > div > .center {
+	margin: 0 auto;
+}
+
+
+.dropzone {
+	display: block;
+	width: 128px;
+	height: 128px;
+	line-height: 128px;
+	color: #666;
+	background: #ececec;
+	text-align: center;
+	border: 1px solid #d8d8d8;
+	border-bottom: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.027), inset 0px 1px 0px rgba(255,255,255,0.69), inset 0px -1px 0px rgba(0,0,0,0.0187), inset 0px 14px 13px rgba(255,255,255,0.57);
+	-webkit-transition: all 50ms ease-out;
+	transition: all 50ms ease-out;
+	z-index: 1;
+}
+
+.dropzone.active {
+	border-color: #acd1e9;
+	box-shadow: 0px 0px 4px 4px #acd1e9;
+	-webkit-transition: all 50ms ease-out;
+	transition: all 50ms ease-out;
+}
+

@@ -1,0 +1,155 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+menu {
+	display: block;
+	color: #fff;
+	background: #333;
+	margin: 0;
+	padding: 0;
+}
+
+menu li {
+	display: inline-block;
+	margin: 0 16px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+menu li a {
+	display: inline-block;
+	margin: 0;
+	padding: 16px;
+	font-size: 16px;
+	line-height: 16px;
+	color: #fff;
+	text-decoration: none;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	-webkit-transition: all 250ms ease-out;
+	transition: all 250ms ease-out;
+}
+
+menu li a:focus,
+menu li a:hover,
+menu li a.focus {
+	color: #333;
+	background: #fff;
+}
+
+menu li a:active {
+	color: #333;
+	background: #acd1e9;
+}
+
+#navi {
+	display: block;
+	padding: 16px;
+	background: #fff;
+	border-bottom: 2px solid #d8d8d8;
+}
+
+#navi nav {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+#navi nav li {
+	display: inline-block;
+	margin: 0 16px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+#view {
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding: 16px;
+	top: 112px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	overflow-x: auto;
+	overflow-y: scroll;
+	z-index: 1;
+}
+
+#sidebar {
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding: 16px;
+	min-width: 256px;
+	max-width: 50%;
+	top: 112px;
+	right: 0px;
+	bottom: 0px;
+	left: auto;
+	background: #fff;
+	border: 0px solid transparent;
+	border-left: 2px solid #d8d8d8;
+	border-radius: 0px 0px 0px 16px;
+	overflow: auto;
+	z-index: 2;
+	-webkit-transition: all 250ms ease-out;
+	transition: all 250ms ease-out;
+}
+
+#sidebar {
+	-webkit-transform: translate(100%, 0%);
+}
+
+#sidebar.active {
+	-webkit-transform: translate(0%, 0%);
+}
+
+#load {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background: 0px 0px url('./load2.gif') no-repeat;
+	vertical-align: middle;
+	opacity: 0;
+	-webkit-transition: all 500ms ease-out;
+	transition: all 500ms ease-out;
+}
+
+#load.active {
+	opacity: 1;
+}
+
+
+
+/*
+ * UI CUSTOMIZATION
+ */
+
+#navi input[type="text"] {
+	width: 256px;
+}
+
+
+
+/*
+ * CONTENT
+ */
+
+table th {
+	padding: 2px 8px;
+	color: #666;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+table td {
+	padding: 2px 8px;
+	border: 1px solid #d8d8d8;
+}

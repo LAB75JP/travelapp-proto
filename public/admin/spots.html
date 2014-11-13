@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+	<title>Spots | Travel Planner</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<link rel="stylesheet" href="./design/layout.css">
+	<link rel="stylesheet" href="./design/ui.css">
+	<script src="./design/layout.js"></script>
+	<script src="./design/ui.js"></script>
+
+	<script src="./lib/App.js"></script>
+	<script src="./config.js"></script>
+
+</head>
+<body>
+
+	<menu>
+		<li><a href="./index.html">Home</a></li>
+		<li><a href="./spots.html">Spots</a></li>
+		<li><a href="./lists.html">Lists</a></li>
+		<li><a href="./categories.html">Categories</a></li>
+	</menu>
+
+	<section id="navi">
+		<nav>
+			<li><input type="text" name="search" placeholder="search ..." onchange="app.trigger('search', [ this.value ])"></li>
+			<li><button onclick="app.setDialog('import')">Import</button></li>
+			<li><button onclick="app.setDialog('export')">Export</button></li>
+			<li><button onclick="app.setSidebar(app.sidebar === true ? false : true)">Sidebar</button></li>
+		</nav>
+		<div id="load"></div>
+	</section>
+
+	<section id="view">
+		<table id="view-table">
+			<tr>
+				<td>No Content opened</td>
+			</tr>
+		</table>
+	</section>
+	<section id="sidebar">
+		This is the sidebar.
+	</section>
+
+	<dialog id="dialog-import" class="active">
+		<div class="active">
+			<h3>Import Spots<button onclick="app.setDialog(null)" aria-hidden="true">x</button></h3>
+			<p>
+				If you want to import Spots from a file on your Computer,<br>
+				drag and drop the file on the dropzone:
+			</p>
+			<div id="dialog-import-dropzone" class="dropzone center">
+				Drop CSV here
+			</div>
+			<footer>
+				<button onclick="app.setDialog(null)">Close</button>
+			</footer>
+		</div>
+		<div>
+			<h3>Import Spots<button onclick="app.setDialog(null)" aria-hidden="true">x</button></h3>
+			<p>
+				Setup the relations between the CSV fields and the
+				Database fields:
+			</p>
+			<table id="dialog-import-fields" class="center">
+				<tr>
+					<th>CSV</th>
+					<th>Database</th>
+				</tr>
+				<tr>
+					<td colspan="2">
+						No Fields imported
+					</td>
+				</tr>
+			</table>
+			<footer>
+				<button onclick="app.trigger('open')">Open File</button>
+			</footer>
+		</div>
+	</dialog>
+
+	<dialog id="dialog-export">
+		<div>
+			This is the export dialog!
+		</div>
+	</dialog>
+
+	<script src="./spots.js"></script>
+</body>
+</html>    
